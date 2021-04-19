@@ -80,10 +80,11 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 
-let result=sum(sumArr[0],sumArr[1])[0];
-let result2=sum(result,sumArr[2])[0];
-let msg = sumArr[0]+','+sumArr[1]+','+sumArr[2] +' was passed in as an array of numbers, and '+ result2 +' is their sum.';
-return [result2,msg];
+function sumArray(sumArr) { //eslint-disable-line
+  let result=sum(sumArr[0],sumArr[1])[0];
+  let result2=sum(result,sumArr[2])[0];
+  let msg = sumArr[0]+','+sumArr[1]+','+sumArr[2] +' was passed in as an array of numbers, and '+ result2 +' is their sum.';
+  return [result2,msg];
 
 }
 
@@ -107,12 +108,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-  let result=multiply(multArr[0],multArr[1])[0]*multArr[2];
-  let msg ='The numbers '+multArr[0]+','+multArr[1]+','+multArr[2]+' have a product of ' + result+'.';
+  
+ let result=multiply(multArr[0],multArr[1])[0];
+ let result2=multiply(result,multArr[2])[0];
+ let msg ='The numbers '+multArr[0]+','+multArr[1]+','+multArr[2]+' have a product of ' + result2+'.';
 
 
-  return [result,msg];
+ return [result2,msg];
 }
+
 
 // Here is the test for multiplyArray(); uncomment it to run it
 testMultiplyArray(testArray);
